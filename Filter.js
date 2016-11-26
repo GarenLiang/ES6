@@ -8,3 +8,15 @@ var lessThanFifteen = reject(numbers, function(number){
 }); 
 lessThanFifteen // [ 10 ];
 */
+
+
+var numbers=[10,20,30];
+function reject(array,iteratorFunction){
+  return array.filter(function(element){
+    return !iteratorFunction(element);
+  });
+}
+
+var lessThanFifteen=reject(numbers,function(number){
+    return number>15;
+});
